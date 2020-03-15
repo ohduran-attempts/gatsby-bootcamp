@@ -1,9 +1,20 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+        query{
+      site{
+        siteMetadata{
+          title, author
+        }
+      }
+    }
+    `)
+
   return (
     <footer>
-      <p>Created by Alvaro Duran </p>
+      <p>Created by {data.site.siteMetadata.author} </p>
     </footer>
   )
 }
