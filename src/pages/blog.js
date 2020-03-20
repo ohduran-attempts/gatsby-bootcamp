@@ -35,7 +35,6 @@ const BlogPage = () => {
               </li>
             )
           })}
-          <li></li>
         </ol>
       </Layout>
   )
