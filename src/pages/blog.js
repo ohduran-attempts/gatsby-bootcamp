@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
+import blogStyles from './blog.module.scss';
 
 const BlogPage = () => {
 
@@ -25,13 +26,13 @@ const BlogPage = () => {
   return (
       <Layout>
         <h1>Blog</h1>
-        <ol>
+        <ol className={blogStyles.posts}>
           {data.allMarkdownRemark.edges.map((edge) =>{
             const link = `/blog/${edge.node.fields.slug}`
             return (
-              <li>
-                <Link to={link}><h2>{edge.node.frontmatter.title}</h2></Link>
-                <p>{edge.node.frontmatter.date}</p>
+              <li className={blogStyles.post}>
+                <Link to={link}><h2>{edge.node.frontmatter.title}</h2>
+                <p>{edge.node.frontmatter.date}</p></Link>
               </li>
             )
           })}
