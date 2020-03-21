@@ -14,11 +14,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "env-cmd": "^10.1.0",
     "gatsby": "^2.19.7",
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.5.1",
     "gatsby-remark-images": "^3.2.0",
+    "gatsby-remark-images-contentful": "^2.2.1",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-contentful": "^2.2.2",
     "gatsby-source-filesystem": "^2.1.55",
